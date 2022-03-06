@@ -23,6 +23,10 @@
     }
     #jam {
       font-family: 'Changa', Times new roman;
+      margin: 2px 90px;
+    }
+    .alert {
+      opacity: 98%;
     }
   </style>
 </head>
@@ -51,7 +55,7 @@
       var menit = Math.floor((jarak % (1000 * 60 * 60)) / (1000 * 60));
       var detik = Math.floor((jarak % (1000 * 60)) / 1000);
 
-      document.getElementById("jam").innerHTML = `<h3><b>${hari}</b><i>D</i> <b>${jam}</b><i>H</i> <b>${menit}</b><i>M</i> <b>${detik}</b><i>S</i></h3>`;
+      document.getElementById("jam").innerHTML = `<h3 class="alert alert-success"><b>${hari}</b><i>D</i> <b>${jam}</b><i>H</i> <b>${menit}</b><i>M</i> <b>${detik}</b><i>S</i></h3>`;
 
       if (jarak <= 0) {
         clearInterval(y);
